@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "906103532440",
+    "project_id": "agilereservations",
+    "storage_bucket": "agilereservations.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906103532440:android:aac1d5afdd4ccd312399ed",
+        "android_client_info": {
+          "package_name": "com.amtodev.hospitalReservations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906103532440-148i43nstis7k04t91ur3rm49jnlrta4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK9Uh81lPmj_oeSPnyahtgRMeWoXhSSAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906103532440-148i43nstis7k04t91ur3rm49jnlrta4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
