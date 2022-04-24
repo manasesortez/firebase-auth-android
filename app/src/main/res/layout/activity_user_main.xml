@@ -80,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/segoebold"
-                android:text="Choose a Hospital"
+                android:text="Haz Click al Boton"
                 android:textColor="#0E284D"
                 android:textSize="25dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -91,46 +91,24 @@
                 app:layout_constraintVertical_bias="0.061"
                 tools:ignore="HardcodedText,SpUsage" />
 
-
-            <EditText
-                android:id="@+id/txtCriterioDoctor"
-                android:layout_width="292dp"
-                android:layout_height="42dp"
-                android:layout_below="@+id/textView"
-                android:background="@drawable/edit_text_background"
-                android:drawablePadding="8dp"
-                android:ems="10"
-                android:fontFamily="@font/seguisb"
-                android:hint="Search to Name"
-                android:inputType="text"
-                android:paddingLeft="15dp"
-                android:textColor="#283241"
-                android:textColorHint="#495057"
-                android:textSize="17dp"
+            <Button
+                android:id="@+id/btnChangePassword"
+                style="@style/loginButton"
+                android:layout_width="246dp"
+                android:layout_height="49dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Cambia tu Contraseña"
+                app:initialCornerAngle="27dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.168"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.62"
-                tools:ignore="Autofill,HardcodedText,LabelFor,RtlCompat,RtlHardcoded,RtlSymmetry,SpUsage,UnknownIdInLayout" />
-
-
-
-            <ImageButton
-                android:id="@+id/btnSearchUserHospital"
-                android:layout_width="73dp"
-                android:layout_height="42dp"
-                android:background="@drawable/btn_shearch"
-                android:clickable="true"
-                android:src="@drawable/ic_baseline_search_24"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.952"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.62"
-                tools:ignore="ContentDescription" />
+                app:layout_constraintTop_toTopOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.565"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp"
+                tools:ignore="HardcodedText" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
