@@ -21,6 +21,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hospital_reservations"
         tools:ignore="AllowBackup">
+        <activity
+            android:name=".user.AddCar"
+            android:exported="false"
+            android:theme="@style/bitcoinTwo"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -32,7 +36,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/rutas" />
         </provider>
-
 
         <activity
             android:name=".user.UserMain"

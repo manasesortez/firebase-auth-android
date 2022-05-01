@@ -22,8 +22,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Doctor"
-            android:id="@+id/DrNameInfo"
+            android:text="Modelo"
+            android:id="@+id/CarModel"
             android:textSize="18dp"
             android:textColor="#000"
             android:textStyle="bold"
@@ -34,18 +34,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Hospital"
+            android:text="Marca"
             android:textColor="#000"
-            android:id="@+id/HospitalNameInfo"
+            android:id="@+id/CarMark"
             tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Specialty"
+            android:text="Año"
             android:textColor="#000"
-            android:id="@+id/SpecialtyNameInfo"
+            android:id="@+id/CarYear"
             tools:ignore="HardcodedText" />
 
     </LinearLayout>
