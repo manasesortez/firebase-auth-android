@@ -22,9 +22,13 @@
         android:theme="@style/Theme.Hospital_reservations"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".user.AddCar"
+            android:name=".user.UpdateCar"
             android:exported="false"
             android:theme="@style/bitcoinTwo"/>
+        <activity
+            android:name=".user.AddCar"
+            android:exported="false"
+            android:theme="@style/bitcoinTwo" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

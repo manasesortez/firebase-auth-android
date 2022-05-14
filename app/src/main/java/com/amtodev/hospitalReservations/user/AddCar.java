@@ -83,7 +83,7 @@ public class AddCar extends AppCompatActivity {
         };
 
         FirebaseApp.initializeApp(AddCar.this);
-        objDataBase = FirebaseDatabase.getInstance("https://agilereservations-default-rtdb.firebaseio.com/");
+        objDataBase = FirebaseDatabase.getInstance("https://parcial-pama-default-rtdb.firebaseio.com/");
         dbReference = objDataBase.getReference();
 
     }

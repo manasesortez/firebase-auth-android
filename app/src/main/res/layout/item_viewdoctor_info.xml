@@ -20,12 +20,28 @@
         tools:ignore="UselessLeaf">
 
         <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="&#8942;"
+            android:textSize="20sp"
+            android:layout_marginTop="-07dp"
+            android:layout_marginRight="-07dp"
+            android:id="@+id/txtOption"
+            android:clickable="true"
+            android:layout_gravity="right"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            tools:ignore="HardcodedText,RtlCompat,RtlHardcoded" />
+
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Modelo"
             android:id="@+id/CarModel"
             android:textSize="18dp"
             android:textColor="#000"
+            android:layout_marginTop="-20dp"
             android:textStyle="bold"
             tools:ignore="HardcodedText,SpUsage" />
 

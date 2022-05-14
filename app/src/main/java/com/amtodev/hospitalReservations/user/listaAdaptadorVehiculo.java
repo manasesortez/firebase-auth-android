@@ -2,11 +2,14 @@ package com.amtodev.hospitalReservations.user;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,7 +39,7 @@ public class listaAdaptadorVehiculo extends RecyclerView.Adapter<listaAdaptadorV
 
     @Override
     public void onBindViewHolder(@NonNull listaAdaptadorVehiculo.DataViewHolder holder, int position) {
-        holder.viewBind(arregloVehiculos.get(position));
+        holder.viewBind(arregloVehiculos.get(position), position);
     }
 
     @Override
@@ -50,13 +53,15 @@ public class listaAdaptadorVehiculo extends RecyclerView.Adapter<listaAdaptadorV
     }
 
     public class DataViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView CarModel, CarMark, CarYear;
+        TextView CarModel, CarMark, CarYear, TaskOption;
 
         public DataViewHolder(@NonNull View itemView) {
             super(itemView);
             CarModel = itemView.findViewById(R.id.CarModel);
             CarMark = itemView.findViewById(R.id.CarMark);
             CarYear = itemView.findViewById(R.id.CarYear);
+            TaskOption = itemView.findViewById(R.id.txtOption);
+
             itemView.setOnClickListener(this);
         }
 
@@ -65,11 +70,27 @@ public class listaAdaptadorVehiculo extends RecyclerView.Adapter<listaAdaptadorV
 
         }
 
-        @SuppressLint("SetTextI18n")
-        public void viewBind(Adaptador adaptador) {
+        @SuppressLint({"SetTextI18n", "NonConstantResourceId"})
+        public void viewBind(Adaptador adaptador, int position) {
             CarModel.setText("Modelo: " + adaptador.getModelo());
             CarMark.setText("Marca: " + adaptador.getMarca());
             CarYear.setText("Año: " + adaptador.getAnio());
+
+            TaskOption.setOnClickListener(view -> {
+                PopupMenu popupMenu = new PopupMenu(contexto, TaskOption);
+                popupMenu.inflate(R.menu.option_menu);
+                popupMenu.setOnMenuItemClickListener(menuItem -> {
+                    switch (menuItem.getItemId()){
+                        case R.id.menu_edit:
+                            Intent intent = new Intent(contexto, UpdateCar.class);
+                            intent.putExtra("edit", (Parcelable) adaptador);
+                            contexto.startActivity(intent);
+                            break;
+                    }
+                    return  false;
+                });
+                popupMenu.show();
+            });
         }
     }
 }
